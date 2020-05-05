@@ -1,18 +1,19 @@
 package io.github.eugenezakhno.todolist.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
-
 @Entity
+@Table(name = "test", schema = "test", catalog = "")
 public class Note {
 
     @Id
     @GeneratedValue
     private int id;
+    @Column(name = "message")
     private String message;
+    @Column(name = "date")
     private Date date;
+    @Column(name = "done")
     private boolean done;
 
     public Note() {
