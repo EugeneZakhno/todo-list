@@ -3,6 +3,9 @@ package io.github.eugenezakhno.todolist.repository;
 import io.github.eugenezakhno.todolist.entity.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface NoteRepository extends JpaRepository<Note, Integer> {
+import java.util.List;
 
+public interface NoteRepository extends JpaRepository<Note, Integer> {
+    List<Note> findAllByOrderByDateAsc();
+    List<Note> findAllByOrderByDateDesc();
 }

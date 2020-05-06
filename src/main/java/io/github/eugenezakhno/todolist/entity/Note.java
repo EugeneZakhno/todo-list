@@ -2,6 +2,7 @@ package io.github.eugenezakhno.todolist.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+
 @Entity
 @Table(name = "test", schema = "test", catalog = "")
 public class Note {
