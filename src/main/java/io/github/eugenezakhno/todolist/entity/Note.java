@@ -1,8 +1,12 @@
 package io.github.eugenezakhno.todolist.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
+
+@Data
 @Entity
 @Table(name = "test", schema = "test", catalog = "")
 public class Note {
@@ -17,37 +21,6 @@ public class Note {
     @Column(name = "done")
     private boolean done;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public boolean isDone() {
-        return done;
-    }
-
-    public void setDone(boolean done) {
-        this.done = done;
-    }
 
     public Note() {
     }
@@ -56,5 +29,11 @@ public class Note {
         this.message = message;
         this.date = new Date();
         this.done = false;
+    }
+
+    public void setDone(boolean done) {
+    }
+
+    public void setMessage(String message) {
     }
 }
