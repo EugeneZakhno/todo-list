@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import java.util.List;
-
+//https://javarush.ru/groups/posts/497-zavoevanie-spring-boot
 @Controller
 public class NoteController {
 
